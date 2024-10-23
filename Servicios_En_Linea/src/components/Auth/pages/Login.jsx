@@ -7,6 +7,7 @@ import { AuthStudent } from '../components/AuthStudent'
 import { startLoadingProfilesApp } from '../store/action_thunk'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProfilesApp } from '../functions/functions'
+import logoSuperior from '../../../img/logo_ibero_superior.png'
 
 export const Login = () => {
   const dispatch =  useDispatch();
@@ -55,16 +56,20 @@ export const Login = () => {
 
         {/* <!-- Columna de Formulario de Login --> */}
         <div className="col-md-6 d-flex align-items-start justify-content-center">
+           {/* Logo en la esquina superior derecha */}
+       <div className="logo-container">
+        <img src={logoSuperior} alt="Logo" className="logo" /> {/* Ajusta el tamaño según sea necesario */}
+      </div>
           <div className="w-75">
             <br />
-            <h2 className="h2-titulo text-center">Préstamos Ibero</h2>
+            <h2 className="h2-titulo">Servicios en Línea</h2>
             <br />
             <h2 className="titulo-login">Iniciar Sesión</h2>
             <div className="row mb-5">
-              <div className="col-md-3">
-                <p className="subtitulo-login">Ingresa como </p>
+              <div className="col-md-4">
+                <p className="subtitulo-login">Ingresa con tu cuenta de </p>
               </div>
-              <div className="col-md-5">
+              <div className="col-md-4">
                 <Select options={options} onChange={handleChange}  value={selected}  />
               </div>
             </div>

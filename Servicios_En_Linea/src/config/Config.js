@@ -1,7 +1,7 @@
 const VITE_API_KEY = import.meta.env.VITE_API_KEY
 
 
-let appIdConfig = 349;
+let appIdConfig = 352;
 let configGlobal = {
   urlApiIbero: '',
   urlApiGestion: '',

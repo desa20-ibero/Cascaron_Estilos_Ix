@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-$sidebar-bg-color: #0c1e35;
+$sidebar-bg-color: #f8f9fa!important;
 $submenu-bg-color: rgba(255, 255, 255, 0.05);
-$submenu-bg-color-collapsed: rgba(#0c1e35, 0.95);
-$sidebar-color: #b3b8d4;
-$highlight-color: #dee2ec;
+$submenu-bg-color-collapsed: rgba(#f8f9fa, 0.95);
+$sidebar-color: #666;
+$highlight-color: red;
 $icon-bg-color: rgba(255, 255, 255, 0.05);
 $icon-size: 35px;
 
@@ -13,12 +13,47 @@ body {
   margin: 0;
   height: 100vh;
   color: #353535;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Alverata'
 }
 
 #root {
   height: 100%;
 }
+
+.pro-item-content:hover {
+  color: #cf0622 !important; /* Rojo quemado */
+}
+
+/* En tu archivo CSS */
+.menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* Cambiar el color del texto en hover */
+.pro-sidebar .pro-menu-item:hover .nav-item {
+  color: red !important; /* Cambiar a rojo */
+}
+
+/* Evitar el fondo gris en hover */
+.pro-sidebar .pro-menu-item:hover {
+  background-color: transparent !important; /* Fondo transparente */
+}
+
+/* Color y estilo para el estado activo */
+.pro-sidebar .pro-menu-item.active .nav-item {
+  font-weight: bold; /* Negrita para el activo */
+  color: #cf0622 !important; /* Rojo quemado para el link activo */
+}
+
+
+.active {
+  font-weight: bold;
+  color: #cf0622 !important; /* Rojo quemado para el link activo */
+}
+
 
 .app {
   height: 100%;
@@ -203,4 +238,38 @@ body {
     color: #000000;
     background: #ffd331;
   }
+}
+
+
+// ESTILOS DE USER EN HEADER SIDEBAR
+.profile-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-image {
+  width: 40px; /* Ajusta el tamaño de la imagen */
+  height: 40px; /* Mantén proporciones */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-info {
+  flex-grow: 1; /* Permite que esta sección crezca */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  background-color: gray; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 5px 10px; /* Espaciado */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
 }

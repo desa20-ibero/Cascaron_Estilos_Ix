@@ -8,6 +8,7 @@ import { NotFound } from "../components/404/NotFound";
 import { HomeScreen } from "../components/Home/pages";
 import { ContentRoutes } from "../components/Content-Admin/routes/ContentRoutes";
 import { FaBars } from "react-icons/fa";
+import logoSuperior from '../img/logo_ibero_superior.png'
 
 export const DashboardRoutes = () => {
   const { perfilSelected } = useSelector((state) => state.auth);
@@ -44,6 +45,11 @@ export const DashboardRoutes = () => {
         <FaBars />
       </div>
       
+       {/* Logo en la esquina superior derecha */}
+       <div className="logo-container">
+        <img src={logoSuperior} alt="Logo" className="logo" /> {/* Ajusta el tamaño según sea necesario */}
+      </div>
+
       <div className={`app ${toggled ? "toggled" : ""}`}>
         <Sidebar toggled={toggled} setToggled={setToggled} />   
           <Routes>
